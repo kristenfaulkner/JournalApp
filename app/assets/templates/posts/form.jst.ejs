@@ -1,0 +1,16 @@
+<div id = "form-template">
+<h1>New Post</h1>
+
+<form>
+  <label>
+    Title
+    <input type="text" name="post[title]" value="<%=post? post.title || undefined : undefined %>">
+  </label>
+  <br>
+  <label>
+    Body
+    <input type="text" name="post[body]" value="<%=post? post.body || undefined : undefined %>">
+  </label> 
+  <button type="submit">Create Post</button>
+</form>
+</div>
