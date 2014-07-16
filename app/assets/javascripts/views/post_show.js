@@ -1,7 +1,8 @@
 JournalApp.Views.PostShow = Backbone.View.extend({
   events: {
     'click .hide-me': 'remove',
-    "click button.delete-post" : "deletePost"
+    "click button.delete-post" : "deletePost"// ,
+//     'click .edit-me': "edit"
   },
   
   attributes: {
@@ -18,7 +19,11 @@ JournalApp.Views.PostShow = Backbone.View.extend({
 
     return this;
   },
-
+  
+  // edit: function() {
+  //   Backbone.history.navigate('/posts/edit', { trigger: true });
+  // },
+  
   deletePost: function(event) {
     var view = this;
     event.preventDefault();

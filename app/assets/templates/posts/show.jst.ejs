@@ -1,7 +1,14 @@
-
-<h1><%= post.get("title") %> </h1>
+<h5>Post #:<%= post.get('id')%></h5>
+<h3><%= post.get("title") %> </h3>
 <br>
 <%= post.get("body") %>
 <br>
+<br>
+<br>
+<br>
 <button class="delete-post" data-id="<%=post.get('id')%>">Delete Post</button>
+
+<a class='edit-me' href="#/posts/<%= post.get('id') %>/edit">Edit Post</a>
+
 <a class='hide-me' href="#/">Back to Index</a>
+

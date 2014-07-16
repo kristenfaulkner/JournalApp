@@ -1,16 +1,18 @@
 <div id = "form-template">
-<h1>New Post</h1>
 
 <form>
+  <h1>
+  <%= (post.get('title')) ? "Edit Post" : "New Post" %>
+  </h1>
   <label>
     Title
-    <input type="text" name="post[title]" value="<%=post? post.title || undefined : undefined %>">
+    <input type="text" name="post[title]" value="<%=post.get('title') %>">
   </label>
   <br>
   <label>
     Body
-    <input type="text" name="post[body]" value="<%=post? post.body || undefined : undefined %>">
+    <textarea name="post[body]" value="<%=post.get('body')%>"></textarea>
   </label> 
-  <button type="submit">Create Post</button>
+  <button type="submit"> <%= (post.get('title')) ? "Update " : "New " %>Post</button>
 </form>
 </div>
